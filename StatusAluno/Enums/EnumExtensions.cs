@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace StatusAluno
 {
+    //Essa classe foi criada para trazer a descrição do Enum (string), quando utilizar o ToDescription()
     public static class EnumExtensions
     {
         public static string ToDescription(this Enum TipoEnum)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StatusAluno
 {
+    //Classe Aluno
     public class Aluno
     {
         public string nome;
@@ -24,12 +25,15 @@ namespace StatusAluno
 
         public bool isSemestreFinalizado;
 
+        //Método para ler as notas do aluno
         private double LerNota()
         {
             while (true)
             {
                 try
                 {
+                    //Receber como string para tratar pontos como vírgula
+                    //Estava dando erro pois tratava 3.1 como 31 e não 3,1
                     string input = Console.ReadLine();
                     input = input.Replace('.', ',');
 
@@ -42,9 +46,10 @@ namespace StatusAluno
             }
         }
 
+        //Atribuir primeira nota
         public double AtribuirNota1()
         {
-            Console.Write("Digite a primeira nota do aluno: ");
+            Console.Write("Digite a nota do primeiro bimestre do aluno: ");
 
             while (true)
             {
@@ -60,9 +65,10 @@ namespace StatusAluno
             }
         }
 
+        //Atribuir segunda nota
         public double AtribuirNota2()
         {
-            Console.Write("Digite a segunda nota do aluno: ");
+            Console.Write("Digite a nota do segundo bimestre do aluno: ");
             while (true)
             {
                 double nota = LerNota();
@@ -77,6 +83,7 @@ namespace StatusAluno
             }
         }
 
+        //Calcular a média do aluno
         public double CalcularMedia()
         {
             media = (nota1 + nota2) / 2;
@@ -84,11 +91,13 @@ namespace StatusAluno
             return media;
         }
 
+        //Método para atribuir faltas
         public void AtribuirFalta()
         {
             faltas++;
         }
 
+        //Método para abonar faltas
         public void AbonarFalta()
         {
             if (faltas > 0)
@@ -96,6 +105,8 @@ namespace StatusAluno
                 faltas--;
             }
         }
+
+        //Verifica o status do aluno
         public string VerificarStatus(Disciplina disciplina)
         {
             if (isSemestreFinalizado)
@@ -121,6 +132,7 @@ namespace StatusAluno
             return status;
         }
 
+        //Caso o Aluno fique de recuperação final
         public string RecuperacaoFinal(double mediaFinal)
         {
             Console.Write("Digite a nota do aluno na prova de Recuperação Final: ");

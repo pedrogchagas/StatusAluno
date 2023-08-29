@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace StatusAluno
 {
+    //Esse EnumStatus foi criado para organizar melhor o projeto,
+    //evitando a repetição de strings completas
+    //e facilitando a comparação dos valores
     public class EnumStatus
     {
         public enum Status

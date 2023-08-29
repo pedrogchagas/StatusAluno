@@ -29,16 +29,19 @@ namespace StatusAluno
             //Verificando o status do Aluno
             var statusAluno = aluno.VerificarStatus(disciplina);
 
+            //Aluno de Recuperação Final
             if (statusAluno == EnumStatus.Status.RECUPERACAOFINAL.ToDescription())
             {
                 Console.WriteLine($"O aluno {aluno.nome} está de {statusAluno} na disciplina {disciplina.nomeDisciplina}");
 
+                //Atribuir nota Rec Final
                 var statusRecFinal = aluno.RecuperacaoFinal(mediaFinal);
 
                 Console.WriteLine($"O aluno {aluno.nome} foi {statusRecFinal} na Recuperação Final na disciplina {disciplina.nomeDisciplina}");
             }
             else 
             {
+                //Aprovado ou Reprovado sem Recuperação
                 Console.WriteLine($"O aluno {aluno.nome} está {statusAluno} na disciplina {disciplina.nomeDisciplina}");
             }
 
