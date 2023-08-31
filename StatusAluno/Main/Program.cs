@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StatusAluno
 {
-    internal class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //Novo Aluno
             Aluno aluno = new Aluno();
@@ -39,7 +35,7 @@ namespace StatusAluno
 
                 Console.WriteLine($"O aluno {aluno.nome} foi {statusRecFinal} na Recuperação Final na disciplina {disciplina.nomeDisciplina}");
             }
-            else 
+            else
             {
                 //Aprovado ou Reprovado sem Recuperação
                 Console.WriteLine($"O aluno {aluno.nome} está {statusAluno} na disciplina {disciplina.nomeDisciplina}");

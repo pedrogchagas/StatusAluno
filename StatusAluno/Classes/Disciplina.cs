@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StatusAluno
+﻿namespace StatusAluno
 {
     //Classe Disciplina
     public class Disciplina
