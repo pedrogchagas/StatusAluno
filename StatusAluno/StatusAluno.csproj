@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Aluno.cs" />
+    <Compile Include="Enums\EnumCargaHoraria.cs" />
     <Compile Include="Enums\EnumExtensions.cs" />
     <Compile Include="Enums\EnumStatus.cs" />
     <Compile Include="Classes\Disciplina.cs" />

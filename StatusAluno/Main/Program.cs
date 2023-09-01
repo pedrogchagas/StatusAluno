@@ -9,18 +9,20 @@ namespace StatusAluno
             //Novo Aluno
             Aluno aluno = new Aluno();
 
-            aluno.nome = "Pedro Chagas"; //nome teste
-            aluno.nota1 = aluno.AtribuirNota1();
-            aluno.nota2 = aluno.AtribuirNota2();
-            var mediaFinal = aluno.CalcularMedia();
-            aluno.faltas = 10;  //valor teste
-            aluno.isSemestreFinalizado = true; //valor teste
+            aluno.nome = aluno.AtribuirNome(); //nome teste
 
             //Nova Disciplina
             var disciplina = new Disciplina();
 
-            disciplina.nomeDisciplina = "Programação Orientada a Objetos II"; //disciplina teste
-            disciplina.cargaHoraria = 80; //valor teste
+            disciplina.nomeDisciplina = disciplina.AtribuirNomeDisciplina(); //disciplina teste
+            disciplina.cargaHoraria = disciplina.AtribuirCargaHoraria(); //valor teste
+
+            aluno.nota1 = aluno.AtribuirNota1();
+            aluno.nota2 = aluno.AtribuirNota2();
+            var mediaFinal = aluno.CalcularMedia();
+            aluno.faltas = aluno.AtribuirFalta();  //valor teste
+            aluno.isSemestreFinalizado = true; //valor teste
+
 
             //Verificando o status do Aluno
             var statusAluno = aluno.VerificarStatus(disciplina);

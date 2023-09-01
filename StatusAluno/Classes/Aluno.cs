@@ -42,6 +42,14 @@ namespace StatusAluno
             }
         }
 
+        public string AtribuirNome()
+        {
+            Console.Write("Digite o nome do Aluno:");
+            var nome = Console.ReadLine();
+
+            return nome;
+        }
+
         //Atribuir primeira nota
         public double AtribuirNota1()
         {
@@ -88,9 +96,15 @@ namespace StatusAluno
         }
 
         //Método para atribuir faltas
-        public void AtribuirFalta()
+        public int AtribuirFalta()
         {
-            faltas++;
+            Console.Write("Digite a quantidade de faltas para essa matéria: ");
+            
+            var strQuantidade = Console.ReadLine();
+
+            var quantidadeFaltas = Convert.ToInt32(strQuantidade);
+
+            return quantidadeFaltas;
         }
 
         //Método para abonar faltas
